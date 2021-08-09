@@ -8,12 +8,13 @@
 import RealmSwift
 
 class Task: Object {
-  
-  @Persisted var name: String = ""
-  @Persisted var isChecked: Bool = false
-  
-  convenience init(name: String) {
-    self.init()
-    self.name = name
-  }
+    
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var name: String = ""
+    @Persisted var isChecked: Bool = false
+    
+    convenience init(name: String) {
+        self.init()
+        self.name = name
+    }
 }
