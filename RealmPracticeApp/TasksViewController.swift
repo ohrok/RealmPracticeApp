@@ -24,6 +24,12 @@ class TasksViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
     }
+    
+    @IBAction func addButtonTapped() {
+        let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "TaskDetail") as! TaskDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension TasksViewController: UITableViewDelegate {
