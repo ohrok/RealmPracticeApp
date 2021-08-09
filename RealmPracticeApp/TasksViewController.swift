@@ -20,6 +20,10 @@ class TasksViewController: UIViewController {
         let localRealm = try! Realm()
         tasks = localRealm.objects(Task.self)
         
+        if tasks.count == 0 {
+            addDummyTask()
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -29,6 +33,20 @@ class TasksViewController: UIViewController {
         let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
         let vc = storybord.instantiateViewController(identifier: "TaskDetail") as! TaskDetailViewController
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func addDummyTask() {
+        let localRealm = try! Realm()
+        ["Running",
+         "Meeting",
+         "Programming",
+         "Make dinner",
+         "Write a diary"
+        ].forEach { name in
+            try! localRealm.write{
+                localRealm.add(Task(name: name))
+            }
+        }
     }
 }
 

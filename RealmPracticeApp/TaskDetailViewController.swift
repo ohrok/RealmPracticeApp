@@ -13,12 +13,6 @@ class TaskDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .done,
-            target: self,
-            action: #selector(doneButtonTapped)
-        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +20,7 @@ class TaskDetailViewController: UIViewController {
         textField.becomeFirstResponder()
     }
     
-    @objc func doneButtonTapped() {
+    @IBAction func doneButtonPushed() {
         print("Done!")
     }
 }
