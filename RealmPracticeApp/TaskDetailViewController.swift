@@ -25,9 +25,14 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         
         if let idToEdit = idToEdit {
+            self.title = "Edit"
             let localRealm = try! Realm()
             let task = localRealm.object(ofType: Task.self, forPrimaryKey: idToEdit)!
             textField.text = task.name
+        } else {
+            self.title = "Add"
+            doneButton.isEnabled = false
+            doneButton.backgroundColor = .systemGray
         }
     }
     
@@ -37,7 +42,7 @@ class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func doneButtonPushed() {
-        guard  let name = textField.text else {
+        guard let name = textField.text else {
             return
         }
         
@@ -57,5 +62,13 @@ class TaskDetailViewController: UIViewController {
             editToTask.name = name
         }
         delegate?.taskDetailViewController(self, didFinishingEditing: editToTask)
+    }
+    
+    @IBAction func editingChanged(_ textField: UITextField) {
+        guard let text = textField.text else {
+            return
+        }
+        doneButton.isEnabled = !text.isEmpty
+        doneButton.backgroundColor = text.isEmpty ? .systemGray : .systemBlue
     }
 }
