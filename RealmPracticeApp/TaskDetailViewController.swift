@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol TaskDetailViewControllerDelegate: AnyObject {
+    func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task)
+}
 
 class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var doneButton: UIButton!
+    
+    var delegate: TaskDetailViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,14 @@ class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func doneButtonPushed() {
-        print("Done!")
+        guard  let name = textField.text else {
+            return
+        }
+        let task = Task(name: name)
+        let localRealm = try! Realm()
+        try! localRealm.write {
+            localRealm.add(task)
+        }
+        delegate?.taskDetailViewController(self, didFinishingAdding: task)
     }
 }

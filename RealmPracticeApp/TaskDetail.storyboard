@@ -46,6 +46,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="doneButton" destination="aFi-TZ-A4F" id="ahA-L5-zu2"/>
                         <outlet property="textField" destination="VTY-AM-thT" id="juN-7q-ncN"/>
                     </connections>
                 </viewController>

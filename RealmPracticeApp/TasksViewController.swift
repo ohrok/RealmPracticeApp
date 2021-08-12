@@ -32,6 +32,7 @@ class TasksViewController: UIViewController {
     @IBAction func addButtonTapped() {
         let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
         let vc = storybord.instantiateViewController(identifier: "TaskDetail") as! TaskDetailViewController
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -67,5 +68,14 @@ extension TasksViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row].name
         return cell
+    }
+}
+
+extension TasksViewController: TaskDetailViewControllerDelegate {
+    
+    func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task) {
+        let indexPath = IndexPath(row: tasks.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        self.navigationController?.popViewController(animated: true)
     }
 }
