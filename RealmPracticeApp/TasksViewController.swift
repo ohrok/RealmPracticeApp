@@ -56,6 +56,15 @@ extension TasksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        let localRealm = try! Realm()
+        try! localRealm.write {
+            localRealm.delete(task)
+        }
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 }
 
 extension TasksViewController: UITableViewDataSource {
