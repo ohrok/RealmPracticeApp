@@ -10,6 +10,7 @@ import RealmSwift
 
 protocol TaskDetailViewControllerDelegate: AnyObject {
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task)
+    func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingEditing task: Task)
 }
 
 class TaskDetailViewController: UIViewController {
@@ -17,10 +18,17 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     
-    var delegate: TaskDetailViewControllerDelegate?
+    weak var delegate: TaskDetailViewControllerDelegate?
+    var idToEdit: ObjectId?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let idToEdit = idToEdit {
+            let localRealm = try! Realm()
+            let task = localRealm.object(ofType: Task.self, forPrimaryKey: idToEdit)!
+            textField.text = task.name
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,11 +40,22 @@ class TaskDetailViewController: UIViewController {
         guard  let name = textField.text else {
             return
         }
-        let task = Task(name: name)
+        
         let localRealm = try! Realm()
-        try! localRealm.write {
-            localRealm.add(task)
+        
+        guard let idToEdit = idToEdit else {
+            let task = Task(name: name)
+            try! localRealm.write {
+                localRealm.add(task)
+            }
+            delegate?.taskDetailViewController(self, didFinishingAdding: task)
+            return
         }
-        delegate?.taskDetailViewController(self, didFinishingAdding: task)
+        
+        let editToTask = localRealm.object(ofType: Task.self, forPrimaryKey: idToEdit)!
+        try! localRealm.write {
+            editToTask.name = name
+        }
+        delegate?.taskDetailViewController(self, didFinishingEditing: editToTask)
     }
 }

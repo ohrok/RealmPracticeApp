@@ -54,6 +54,11 @@ class TasksViewController: UIViewController {
 extension TasksViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "TaskDetail") as! TaskDetailViewController
+        vc.delegate = self
+        vc.idToEdit = tasks[indexPath.row]._id
+        self.navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -85,6 +90,15 @@ extension TasksViewController: TaskDetailViewControllerDelegate {
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task) {
         let indexPath = IndexPath(row: tasks.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingEditing task: Task) {
+        let row = tasks.firstIndex(of: task)!
+        let indexPath = IndexPath(row: row, section: 0)
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.textLabel?.text = tasks[indexPath.row].name
+        }
         self.navigationController?.popViewController(animated: true)
     }
 }
