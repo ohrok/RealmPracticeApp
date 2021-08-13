@@ -26,6 +26,7 @@ class TasksViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 44
         tableView.tableFooterView = UIView()
     }
     
@@ -79,8 +80,8 @@ extension TasksViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-        cell.textLabel?.text = tasks[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
+        cell.configure(for: tasks[indexPath.row])
         return cell
     }
 }
@@ -96,8 +97,8 @@ extension TasksViewController: TaskDetailViewControllerDelegate {
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingEditing task: Task) {
         let row = tasks.firstIndex(of: task)!
         let indexPath = IndexPath(row: row, section: 0)
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.textLabel?.text = tasks[indexPath.row].name
+        if let cell = tableView.cellForRow(at: indexPath) as? TaskCell {
+            cell.configure(for: tasks[indexPath.row])
         }
         self.navigationController?.popViewController(animated: true)
     }
