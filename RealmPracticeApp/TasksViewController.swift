@@ -50,6 +50,17 @@ class TasksViewController: UIViewController {
             }
         }
     }
+    
+    @objc func cellButtonTapped(_ button: UIButton) {
+        let task = tasks[button.tag]
+        let image = UIImage(systemName: task.isChecked ? "circle.fill" : "checkmark.circle.fill")
+        button.setImage(image, for: .normal)
+        
+        let localRealm = try! Realm()
+        try! localRealm.write {
+            task.isChecked = !task.isChecked
+        }
+    }
 }
 
 extension TasksViewController: UITableViewDelegate {
@@ -82,6 +93,8 @@ extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         cell.configure(for: tasks[indexPath.row])
+        cell.button.tag = indexPath.row
+        cell.button.addTarget(self, action: #selector(cellButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
 }
