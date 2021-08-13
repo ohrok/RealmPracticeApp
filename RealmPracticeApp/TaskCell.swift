@@ -15,7 +15,8 @@ class TaskCell: UITableViewCell {
     
     func configure(for task: Task) {
         label.text = task.name
-        let image = UIImage(systemName: task.isChecked ? "checkmark.circle.fill" : "circle.fill")
+        let largeConfig = UIImage.SymbolConfiguration(scale: .large)
+        let image = UIImage(systemName: task.isChecked ? "checkmark.circle.fill" : "circle.fill", withConfiguration: largeConfig)
         button.setImage(image, for: .normal)
     }
 }

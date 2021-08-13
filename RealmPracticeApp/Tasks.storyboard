@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,10 +29,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-VL-LL2">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="22.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="394" height="22.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-k1-KdG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -43,18 +44,20 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-3z-VHz">
-                                                            <rect key="frame" x="354" y="0.0" width="20" height="22.5"/>
+                                                            <rect key="frame" x="334" y="0.0" width="60" height="22.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="zR5-A2-dep"/>
+                                                                <constraint firstAttribute="width" constant="60" id="zR5-A2-dep"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <state key="normal" image="circle.fill" catalog="system"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="circle.fill" catalog="system" symbolScale="default"/>
+                                                            </state>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="iUh-VL-LL2" secondAttribute="trailing" constant="20" symbolic="YES" id="Hba-v7-ckV"/>
+                                                <constraint firstAttribute="trailing" secondItem="iUh-VL-LL2" secondAttribute="trailing" id="Hba-v7-ckV"/>
                                                 <constraint firstItem="iUh-VL-LL2" firstAttribute="top" secondItem="y4V-fO-pWh" secondAttribute="top" id="Xlp-I2-cUj"/>
                                                 <constraint firstAttribute="bottom" secondItem="iUh-VL-LL2" secondAttribute="bottom" id="n9k-ID-e6K"/>
                                                 <constraint firstItem="iUh-VL-LL2" firstAttribute="leading" secondItem="y4V-fO-pWh" secondAttribute="leading" constant="20" symbolic="YES" id="xUN-tH-upG"/>

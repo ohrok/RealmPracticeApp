@@ -22,7 +22,7 @@ class TasksViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 60
+        tableView.rowHeight = 50
         tableView.tableFooterView = UIView()
     }
     
