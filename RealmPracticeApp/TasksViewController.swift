@@ -20,13 +20,9 @@ class TasksViewController: UIViewController {
         let localRealm = try! Realm()
         tasks = localRealm.objects(Task.self)
         
-        if tasks.count == 0 {
-            addDummyTask()
-        }
-        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 44
+        tableView.rowHeight = 60
         tableView.tableFooterView = UIView()
     }
     
@@ -52,13 +48,16 @@ class TasksViewController: UIViewController {
     }
     
     @objc func cellButtonTapped(_ button: UIButton) {
-        let task = tasks[button.tag]
-        let image = UIImage(systemName: task.isChecked ? "circle.fill" : "checkmark.circle.fill")
-        button.setImage(image, for: .normal)
+        let indexPath = IndexPath(row: button.tag, section: 0)
+        let task = tasks[indexPath.row]
         
         let localRealm = try! Realm()
         try! localRealm.write {
             task.isChecked = !task.isChecked
+        }
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? TaskCell {
+            cell.configure(for: task)
         }
     }
 }
