@@ -22,17 +22,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="j5F-gi-ImL" customClass="TaskCell" customModule="RealmPracticeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5F-gi-ImL" id="y4V-fO-pWh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="22.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-VL-LL2">
-                                                    <rect key="frame" x="20" y="0.0" width="394" height="22.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-k1-KdG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="22.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-k1-KdG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -44,10 +44,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-3z-VHz">
-                                                            <rect key="frame" x="334" y="0.0" width="60" height="22.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="zR5-A2-dep"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="354" y="0.0" width="20" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <state key="normal">
                                                                 <imageReference key="image" image="circle.fill" catalog="system" symbolScale="default"/>
@@ -57,9 +54,8 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="iUh-VL-LL2" secondAttribute="trailing" id="Hba-v7-ckV"/>
-                                                <constraint firstItem="iUh-VL-LL2" firstAttribute="top" secondItem="y4V-fO-pWh" secondAttribute="top" id="Xlp-I2-cUj"/>
-                                                <constraint firstAttribute="bottom" secondItem="iUh-VL-LL2" secondAttribute="bottom" id="n9k-ID-e6K"/>
+                                                <constraint firstItem="iUh-VL-LL2" firstAttribute="centerY" secondItem="y4V-fO-pWh" secondAttribute="centerY" id="BMM-vr-7gE"/>
+                                                <constraint firstAttribute="trailing" secondItem="iUh-VL-LL2" secondAttribute="trailing" constant="20" symbolic="YES" id="Hba-v7-ckV"/>
                                                 <constraint firstItem="iUh-VL-LL2" firstAttribute="leading" secondItem="y4V-fO-pWh" secondAttribute="leading" constant="20" symbolic="YES" id="xUN-tH-upG"/>
                                             </constraints>
                                         </tableViewCellContentView>
