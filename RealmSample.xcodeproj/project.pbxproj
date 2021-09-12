@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D81E666A26C631C900B7AAF3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		D8E93A4626C0E28F00E81799 /* RealmPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E93A4626C0E28F00E81799 /* RealmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E93A4926C0E28F00E81799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D8E93A4D26C0E28F00E81799 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		D8E93A3D26C0E28F00E81799 = {
 			isa = PBXGroup;
 			children = (
-				D8E93A4826C0E28F00E81799 /* RealmPracticeApp */,
+				D8E93A4826C0E28F00E81799 /* RealmSample */,
 				D8E93A4726C0E28F00E81799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,12 +76,12 @@
 		D8E93A4726C0E28F00E81799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8E93A4626C0E28F00E81799 /* RealmPracticeApp.app */,
+				D8E93A4626C0E28F00E81799 /* RealmSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D8E93A4826C0E28F00E81799 /* RealmPracticeApp */ = {
+		D8E93A4826C0E28F00E81799 /* RealmSample */ = {
 			isa = PBXGroup;
 			children = (
 				D8E93A4926C0E28F00E81799 /* AppDelegate.swift */,
@@ -93,7 +93,7 @@
 				D8E93A5226C0E29400E81799 /* Assets.xcassets */,
 				D8E93A5726C0E29400E81799 /* Info.plist */,
 			);
-			path = RealmPracticeApp;
+			path = RealmSample;
 			sourceTree = "<group>";
 		};
 		D8E93A6A26C132B400E81799 /* Storyboards */ = {
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D8E93A4526C0E28F00E81799 /* RealmPracticeApp */ = {
+		D8E93A4526C0E28F00E81799 /* RealmSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8E93A5A26C0E29400E81799 /* Build configuration list for PBXNativeTarget "RealmPracticeApp" */;
+			buildConfigurationList = D8E93A5A26C0E29400E81799 /* Build configuration list for PBXNativeTarget "RealmSample" */;
 			buildPhases = (
 				D8E93A4226C0E28F00E81799 /* Sources */,
 				D8E93A4326C0E28F00E81799 /* Frameworks */,
@@ -130,13 +130,13 @@
 			);
 			dependencies = (
 			);
-			name = RealmPracticeApp;
+			name = RealmSample;
 			packageProductDependencies = (
 				D8CB70AD26EC5B9D00EC429A /* Realm */,
 				D8CB70AF26EC5B9D00EC429A /* RealmSwift */,
 			);
 			productName = RealmPracticeApp;
-			productReference = D8E93A4626C0E28F00E81799 /* RealmPracticeApp.app */;
+			productReference = D8E93A4626C0E28F00E81799 /* RealmSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D8E93A4126C0E28F00E81799 /* Build configuration list for PBXProject "RealmPracticeApp" */;
+			buildConfigurationList = D8E93A4126C0E28F00E81799 /* Build configuration list for PBXProject "RealmSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8E93A4526C0E28F00E81799 /* RealmPracticeApp */,
+				D8E93A4526C0E28F00E81799 /* RealmSample */,
 			);
 		};
 /* End PBXProject section */
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RealmPracticeApp/Info.plist;
+				INFOPLIST_FILE = RealmSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RealmPracticeApp/Info.plist;
+				INFOPLIST_FILE = RealmSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D8E93A4126C0E28F00E81799 /* Build configuration list for PBXProject "RealmPracticeApp" */ = {
+		D8E93A4126C0E28F00E81799 /* Build configuration list for PBXProject "RealmSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8E93A5826C0E29400E81799 /* Debug */,
@@ -384,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8E93A5A26C0E29400E81799 /* Build configuration list for PBXNativeTarget "RealmPracticeApp" */ = {
+		D8E93A5A26C0E29400E81799 /* Build configuration list for PBXNativeTarget "RealmSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8E93A5B26C0E29400E81799 /* Debug */,
