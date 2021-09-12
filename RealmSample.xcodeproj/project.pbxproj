@@ -68,7 +68,7 @@
 		D8E93A3D26C0E28F00E81799 = {
 			isa = PBXGroup;
 			children = (
-				D8E93A4826C0E28F00E81799 /* RealmPracticeApp */,
+				D8E93A4826C0E28F00E81799 /* RealmSample */,
 				D8E93A4726C0E28F00E81799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D8E93A4826C0E28F00E81799 /* RealmPracticeApp */ = {
+		D8E93A4826C0E28F00E81799 /* RealmSample */ = {
 			isa = PBXGroup;
 			children = (
 				D8E93A4926C0E28F00E81799 /* AppDelegate.swift */,
@@ -93,7 +93,7 @@
 				D8E93A5226C0E29400E81799 /* Assets.xcassets */,
 				D8E93A5726C0E29400E81799 /* Info.plist */,
 			);
-			path = RealmPracticeApp;
+			path = RealmSample;
 			sourceTree = "<group>";
 		};
 		D8E93A6A26C132B400E81799 /* Storyboards */ = {
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RealmPracticeApp/Info.plist;
+				INFOPLIST_FILE = RealmSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH7H3K3AG6;
-				INFOPLIST_FILE = RealmPracticeApp/Info.plist;
+				INFOPLIST_FILE = RealmSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
