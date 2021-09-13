@@ -1,5 +1,5 @@
 //
-//  TasksViewController.swift
+//  TaskListViewController.swift
 //  RealmPracticeApp
 //
 //  Created by 大井裕貴 on 2021/08/09.
@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class TasksViewController: UIViewController {
+class TaskListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private var tasks: Results<Task>!
@@ -62,7 +62,7 @@ class TasksViewController: UIViewController {
     }
 }
 
-extension TasksViewController: UITableViewDelegate {
+extension TaskListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
@@ -83,7 +83,7 @@ extension TasksViewController: UITableViewDelegate {
     }
 }
 
-extension TasksViewController: UITableViewDataSource {
+extension TaskListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
@@ -98,7 +98,7 @@ extension TasksViewController: UITableViewDataSource {
     }
 }
 
-extension TasksViewController: TaskDetailViewControllerDelegate {
+extension TaskListViewController: TaskDetailViewControllerDelegate {
     
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task) {
         let indexPath = IndexPath(row: tasks.count - 1, section: 0)
