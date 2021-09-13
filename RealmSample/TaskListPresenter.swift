@@ -15,7 +15,7 @@ protocol TaskListPresenterInput {
     func didTapAddButton()
     func didTapCellButton(indexPath: IndexPath)
     func didSelectRow(at indexPath: IndexPath)
-    func deleteForRow(at indexPath: IndexPath)
+    func commitDeleteForRow(at indexPath: IndexPath)
 }
 
 protocol TaskListPresenterOutput: AnyObject {
@@ -64,7 +64,7 @@ final class TaskListPresenter: TaskListPresenterInput {
         view.transitionToTaskDetail(taskToEdit: task)
     }
     
-    func deleteForRow(at indexPath: IndexPath) {
+    func commitDeleteForRow(at indexPath: IndexPath) {
         guard indexPath.row < tasks.count else { return }
         let task = tasks[indexPath.row]
         model.deleteTask(task)

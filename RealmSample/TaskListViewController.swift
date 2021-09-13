@@ -47,7 +47,7 @@ extension TaskListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        presenter.deleteForRow(at: indexPath)
+        presenter.commitDeleteForRow(at: indexPath)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
