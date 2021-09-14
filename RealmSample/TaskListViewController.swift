@@ -39,7 +39,6 @@ class TaskListViewController: UIViewController {
 }
 
 extension TaskListViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -52,7 +51,6 @@ extension TaskListViewController: UITableViewDelegate {
 }
 
 extension TaskListViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfTasks
     }
@@ -69,7 +67,6 @@ extension TaskListViewController: UITableViewDataSource {
 }
 
 extension TaskListViewController: TaskDetailViewControllerDelegate {
-    
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingAdding task: Task) {
         let indexPath = IndexPath(row: presenter.numberOfTasks - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)

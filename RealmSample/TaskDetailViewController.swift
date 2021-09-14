@@ -14,7 +14,6 @@ protocol TaskDetailViewControllerDelegate: AnyObject {
 }
 
 class TaskDetailViewController: UIViewController {
-    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     

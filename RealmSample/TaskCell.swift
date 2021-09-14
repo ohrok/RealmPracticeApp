@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class TaskCell: UITableViewCell {
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
