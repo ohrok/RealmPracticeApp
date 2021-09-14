@@ -9,15 +9,14 @@ import UIKit
 
 class TaskListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    private var presenter: TaskListPresenterInput!
     
-    private lazy var presenter: TaskListPresenterInput = {
-        let presenter = TaskListPresenter(view: self, model: TaskListModel())
-        return presenter
-    }()
+    func inject(presenter: TaskListPresenterInput) {
+        self.presenter = presenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
     }
     
