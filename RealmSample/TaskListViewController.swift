@@ -92,10 +92,11 @@ extension TaskListViewController: TaskListPresenterOutput {
     }
     
     func transitionToTaskDetail(taskToEdit: Task?) {
-        let storybord = UIStoryboard(name: "TaskDetail", bundle: nil)
-        let vc = storybord.instantiateViewController(identifier: "TaskDetail") as! TaskDetailViewController
-        vc.delegate = self
-        vc.idToEdit = taskToEdit?._id
-        self.navigationController?.pushViewController(vc, animated: true)
+        let taskDetailViewController = UIStoryboard(name: "TaskDetail", bundle: nil).instantiateInitialViewController() as! TaskDetailViewController
+        let model = TaskDetailModel()
+        let presenter = TaskDetailPresenter(view: taskDetailViewController, model: model, taskToEdit: taskToEdit)
+        taskDetailViewController.delegate = self
+        taskDetailViewController.inject(presenter: presenter)
+        self.navigationController?.pushViewController(taskDetailViewController, animated: true)
     }
 }

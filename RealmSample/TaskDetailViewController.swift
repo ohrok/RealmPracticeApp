@@ -18,21 +18,15 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     weak var delegate: TaskDetailViewControllerDelegate?
-    var idToEdit: ObjectId?
+    private var presenter: TaskDetailPresenterInput!
+    
+    func inject(presenter: TaskDetailPresenterInput) {
+        self.presenter = presenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let idToEdit = idToEdit {
-            self.title = "Edit"
-            let localRealm = try! Realm()
-            let task = localRealm.object(ofType: Task.self, forPrimaryKey: idToEdit)!
-            textField.text = task.name
-        } else {
-            self.title = "Add"
-            doneButton.isEnabled = false
-            doneButton.backgroundColor = .systemGray
-        }
+        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,27 +34,8 @@ class TaskDetailViewController: UIViewController {
         textField.becomeFirstResponder()
     }
     
-    @IBAction func doneButtonPushed() {
-        guard let name = textField.text else {
-            return
-        }
-        
-        let localRealm = try! Realm()
-        
-        guard let idToEdit = idToEdit else {
-            let task = Task(name: name)
-            try! localRealm.write {
-                localRealm.add(task)
-            }
-            delegate?.taskDetailViewController(self, didFinishingAdding: task)
-            return
-        }
-        
-        let editToTask = localRealm.object(ofType: Task.self, forPrimaryKey: idToEdit)!
-        try! localRealm.write {
-            editToTask.name = name
-        }
-        delegate?.taskDetailViewController(self, didFinishingEditing: editToTask)
+    @IBAction func doneButtonTapped() {
+        presenter.didTapDoneButton(text: textField.text)
     }
     
     @IBAction func editingChanged(_ textField: UITextField) {
@@ -69,5 +44,26 @@ class TaskDetailViewController: UIViewController {
         }
         doneButton.isEnabled = !text.isEmpty
         doneButton.backgroundColor = text.isEmpty ? .systemGray : .systemBlue
+    }
+}
+
+extension TaskDetailViewController: TaskDetailPresenterOutput {
+    func setupEditMode(task: Task) {
+        self.title = "Edit"
+        textField.text = task.name
+    }
+    
+    func setupAddMode() {
+        self.title = "Add"
+        doneButton.isEnabled = false
+        doneButton.backgroundColor = .systemGray
+    }
+    
+    func editTask(_ task: Task) {
+        delegate?.taskDetailViewController(self, didFinishingEditing: task)
+    }
+    
+    func addTask(_ task: Task) {
+        delegate?.taskDetailViewController(self, didFinishingAdding: task)
     }
 }

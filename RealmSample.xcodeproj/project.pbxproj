@@ -12,6 +12,8 @@
 		D8CB70B026EC5B9D00EC429A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D8CB70AF26EC5B9D00EC429A /* RealmSwift */; };
 		D8CB70B326EF3DE800EC429A /* TaskListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */; };
 		D8CB70B526EF3E0200EC429A /* TaskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B426EF3E0200EC429A /* TaskListModel.swift */; };
+		D8CB70B726F1ED3700EC429A /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */; };
+		D8CB70B926F1ED4C00EC429A /* TaskDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */; };
 		D8E93A4A26C0E28F00E81799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4926C0E28F00E81799 /* AppDelegate.swift */; };
 		D8E93A4C26C0E28F00E81799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */; };
 		D8E93A4E26C0E28F00E81799 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4D26C0E28F00E81799 /* TaskListViewController.swift */; };
@@ -27,6 +29,8 @@
 		D81E666A26C631C900B7AAF3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenter.swift; sourceTree = "<group>"; };
 		D8CB70B426EF3E0200EC429A /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
+		D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailModel.swift; sourceTree = "<group>"; };
+		D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailPresenter.swift; sourceTree = "<group>"; };
 		D8E93A4626C0E28F00E81799 /* RealmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E93A4926C0E28F00E81799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */,
+				D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */,
+				D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */,
 				D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */,
 			);
 			name = TaskDetail;
@@ -197,6 +203,8 @@
 				D8E93A4E26C0E28F00E81799 /* TaskListViewController.swift in Sources */,
 				D8E93A4A26C0E28F00E81799 /* AppDelegate.swift in Sources */,
 				D81E666B26C631C900B7AAF3 /* TaskCell.swift in Sources */,
+				D8CB70B926F1ED4C00EC429A /* TaskDetailPresenter.swift in Sources */,
+				D8CB70B726F1ED3700EC429A /* TaskDetailModel.swift in Sources */,
 				D8CB70B526EF3E0200EC429A /* TaskListModel.swift in Sources */,
 				D8E93A4C26C0E28F00E81799 /* SceneDelegate.swift in Sources */,
 			);
