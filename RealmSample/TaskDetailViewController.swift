@@ -17,11 +17,12 @@ final class TaskDetailViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     
-    weak var delegate: TaskDetailViewControllerDelegate?
     private var presenter: TaskDetailPresenterInput!
+    weak var delegate: TaskDetailViewControllerDelegate?
     
-    func inject(presenter: TaskDetailPresenterInput) {
+    func inject(presenter: TaskDetailPresenterInput, delegate: TaskDetailViewControllerDelegate) {
         self.presenter = presenter
+        self.delegate = delegate
     }
     
     override func viewDidLoad() {

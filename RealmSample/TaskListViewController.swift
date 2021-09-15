@@ -95,8 +95,7 @@ extension TaskListViewController: TaskListPresenterOutput {
         let taskDetailViewController = UIStoryboard(name: "TaskDetail", bundle: nil).instantiateInitialViewController() as! TaskDetailViewController
         let model = TaskDetailModel()
         let presenter = TaskDetailPresenter(view: taskDetailViewController, model: model, taskToEdit: taskToEdit)
-        taskDetailViewController.delegate = self
-        taskDetailViewController.inject(presenter: presenter)
+        taskDetailViewController.inject(presenter: presenter, delegate: self)
         self.navigationController?.pushViewController(taskDetailViewController, animated: true)
     }
 }
