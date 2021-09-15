@@ -57,15 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D81E666826C631A400B7AAF3 /* Entity */ = {
+		D8BEBB7626F24A2100CB04EB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				D8E93A5F26C0EA2300E81799 /* Task.swift */,
 			);
-			name = Entity;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		D81E666926C631B100B7AAF3 /* TaskList */ = {
+		D8BEBB7726F24A4000CB04EB /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
 				D8E93A6126C0ED0400E81799 /* TaskList.storyboard */,
@@ -73,7 +73,18 @@
 				D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */,
 				D8E93A4D26C0E28F00E81799 /* TaskListViewController.swift */,
 			);
-			name = TaskList;
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		D8BEBB7926F24A6C00CB04EB /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */,
+				D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */,
+				D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */,
+				D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */,
+			);
+			path = TaskDetail;
 			sourceTree = "<group>";
 		};
 		D8E93A3D26C0E28F00E81799 = {
@@ -98,25 +109,14 @@
 				D8E93A4926C0E28F00E81799 /* AppDelegate.swift */,
 				D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */,
 				D81E666A26C631C900B7AAF3 /* TaskCell.swift */,
-				D81E666826C631A400B7AAF3 /* Entity */,
-				D81E666926C631B100B7AAF3 /* TaskList */,
-				D8E93A6B26C13B1900E81799 /* TaskDetail */,
+				D8BEBB7626F24A2100CB04EB /* Entity */,
+				D8BEBB7726F24A4000CB04EB /* TaskList */,
+				D8BEBB7926F24A6C00CB04EB /* TaskDetail */,
 				D8E93A5426C0E29400E81799 /* LaunchScreen.storyboard */,
 				D8E93A5226C0E29400E81799 /* Assets.xcassets */,
 				D8E93A5726C0E29400E81799 /* Info.plist */,
 			);
 			path = RealmSample;
-			sourceTree = "<group>";
-		};
-		D8E93A6B26C13B1900E81799 /* TaskDetail */ = {
-			isa = PBXGroup;
-			children = (
-				D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */,
-				D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */,
-				D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */,
-				D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */,
-			);
-			name = TaskDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
