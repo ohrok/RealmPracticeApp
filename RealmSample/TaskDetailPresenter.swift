@@ -10,13 +10,16 @@ import Foundation
 protocol TaskDetailPresenterInput {
     func viewDidLoad()
     func didTapDoneButton(text: String?)
+    func editingChangedTextField(text: String?)
 }
 
 protocol TaskDetailPresenterOutput: AnyObject {
-    func setupEditMode(task: Task)
     func setupAddMode()
-    func editTask(_ task: Task)
-    func addTask(_ task: Task)
+    func setupEditMode(task: Task)
+    func addTask(_ task: Task)  // FIXME: ideal name
+    func editTask(_ task: Task) // FIXME: ideal name
+    func enableDoneButton()
+    func disableDoneButton()
 }
 
 final class TaskDetailPresenter: TaskDetailPresenterInput {
@@ -48,6 +51,15 @@ final class TaskDetailPresenter: TaskDetailPresenterInput {
             let task = Task(name: taskName)
             model.addTask(task)
             view.addTask(task)
+        }
+    }
+    
+    func editingChangedTextField(text: String?) {
+        guard let text = text else { return }
+        if text.isEmpty {
+            view.disableDoneButton()
+        } else {
+            view.enableDoneButton()
         }
     }
 }

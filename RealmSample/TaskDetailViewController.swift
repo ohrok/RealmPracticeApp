@@ -40,31 +40,37 @@ final class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func editingChanged(_ textField: UITextField) {
-        guard let text = textField.text else {
-            return
-        }
-        doneButton.isEnabled = !text.isEmpty
-        doneButton.backgroundColor = text.isEmpty ? .systemGray : .systemBlue
+        presenter.editingChangedTextField(text: textField.text)
     }
 }
 
 extension TaskDetailViewController: TaskDetailPresenterOutput {
-    func setupEditMode(task: Task) {
-        self.title = "Edit"
-        textField.text = task.name
-    }
-    
     func setupAddMode() {
         self.title = "Add"
         doneButton.isEnabled = false
         doneButton.backgroundColor = .systemGray
     }
     
-    func editTask(_ task: Task) {
-        delegate?.taskDetailViewController(self, didFinishingEditing: task)
+    func setupEditMode(task: Task) {
+        self.title = "Edit"
+        textField.text = task.name
     }
     
     func addTask(_ task: Task) {
         delegate?.taskDetailViewController(self, didFinishingAdding: task)
+    }
+    
+    func editTask(_ task: Task) {
+        delegate?.taskDetailViewController(self, didFinishingEditing: task)
+    }
+    
+    func enableDoneButton() {
+        doneButton.isEnabled = true
+        doneButton.backgroundColor = .systemBlue
+    }
+    
+    func disableDoneButton() {
+        doneButton.isEnabled = false
+        doneButton.backgroundColor = .systemGray
     }
 }
