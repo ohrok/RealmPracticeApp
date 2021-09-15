@@ -76,8 +76,7 @@ extension TaskListViewController: TaskDetailViewControllerDelegate {
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingEditing task: Task) {
         let row = presenter.row(of: task)!
         let indexPath = IndexPath(row: row, section: 0)
-        if let cell = tableView.cellForRow(at: indexPath) as? TaskCell,
-           let task = presenter.task(forRow: row) {
+        if let cell = tableView.cellForRow(at: indexPath) as? TaskCell {
             cell.configure(for: task)
         }
         self.navigationController?.popViewController(animated: true)
