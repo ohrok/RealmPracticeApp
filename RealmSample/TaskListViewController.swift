@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskListViewController: UIViewController {
+final class TaskListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var presenter: TaskListPresenterInput!
     

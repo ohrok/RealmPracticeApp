@@ -13,7 +13,7 @@ protocol TaskDetailViewControllerDelegate: AnyObject {
     func taskDetailViewController(_ controller: TaskDetailViewController, didFinishingEditing task: Task)
 }
 
-class TaskDetailViewController: UIViewController {
+final class TaskDetailViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     
