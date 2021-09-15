@@ -16,8 +16,8 @@ protocol TaskDetailPresenterInput {
 protocol TaskDetailPresenterOutput: AnyObject {
     func setupAddMode()
     func setupEditMode(task: Task)
-    func addTask(_ task: Task)  // FIXME: ideal name
-    func editTask(_ task: Task) // FIXME: ideal name
+    func addTaskToList(_ task: Task)  
+    func editTaskInList(_ task: Task)
     func enableDoneButton()
     func disableDoneButton()
 }
@@ -46,11 +46,11 @@ final class TaskDetailPresenter: TaskDetailPresenterInput {
         
         if let task = taskToEdit {
             model.editTaskName(task: task, name: taskName)
-            view.editTask(task)
+            view.editTaskInList(task)
         } else {
             let task = Task(name: taskName)
             model.addTask(task)
-            view.addTask(task)
+            view.addTaskToList(task)
         }
     }
     

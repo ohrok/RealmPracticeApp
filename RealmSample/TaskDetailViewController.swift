@@ -56,11 +56,11 @@ extension TaskDetailViewController: TaskDetailPresenterOutput {
         textField.text = task.name
     }
     
-    func addTask(_ task: Task) {
+    func addTaskToList(_ task: Task) {
         delegate?.taskDetailViewController(self, didFinishingAdding: task)
     }
     
-    func editTask(_ task: Task) {
+    func editTaskInList(_ task: Task) {
         delegate?.taskDetailViewController(self, didFinishingEditing: task)
     }
     
