@@ -31,11 +31,6 @@ final class TaskListViewController: UIViewController {
     @IBAction func addButtonTapped() {
         presenter.didTapAddButton()
     }
-    
-    @objc func cellButtonTapped(_ button: UIButton) {
-        let indexPath = IndexPath(row: button.tag, section: 0)
-        presenter.didTapCellButton(indexPath: indexPath)
-    }
 }
 
 extension TaskListViewController: UITableViewDelegate {
@@ -60,9 +55,15 @@ extension TaskListViewController: UITableViewDataSource {
         if let task = presenter.task(forRow: indexPath.row) {
             cell.configure(for: task)
         }
-        cell.button.tag = indexPath.row
-        cell.button.addTarget(self, action: #selector(cellButtonTapped(_:)), for: .touchUpInside)
+        cell.delegate = self
         return cell
+    }
+}
+
+extension TaskListViewController: TaskCellDelegate {
+    func didTapButton(cell: TaskCell) {
+        let indexPath = tableView.indexPath(for: cell)!
+        presenter.didTapCellButton(indexPath: indexPath)
     }
 }
 

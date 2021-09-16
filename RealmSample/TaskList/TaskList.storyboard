@@ -49,6 +49,9 @@
                                                             <state key="normal">
                                                                 <imageReference key="image" image="circle.fill" catalog="system" symbolScale="default"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="buttonTapped" destination="j5F-gi-ImL" eventType="touchUpInside" id="XjF-e1-fEG"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
