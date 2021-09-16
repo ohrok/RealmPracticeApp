@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D81E666B26C631C900B7AAF3 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E666A26C631C900B7AAF3 /* TaskCell.swift */; };
+		D8826EE726F2F9D000C4F9AF /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8826EE626F2F9D000C4F9AF /* TaskCell.xib */; };
 		D8CB70AE26EC5B9D00EC429A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D8CB70AD26EC5B9D00EC429A /* Realm */; };
 		D8CB70B026EC5B9D00EC429A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D8CB70AF26EC5B9D00EC429A /* RealmSwift */; };
 		D8CB70B326EF3DE800EC429A /* TaskListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		D81E666A26C631C900B7AAF3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		D8826EE626F2F9D000C4F9AF /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenter.swift; sourceTree = "<group>"; };
 		D8CB70B426EF3E0200EC429A /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
 		D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailModel.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D8E93A4926C0E28F00E81799 /* AppDelegate.swift */,
 				D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */,
 				D81E666A26C631C900B7AAF3 /* TaskCell.swift */,
+				D8826EE626F2F9D000C4F9AF /* TaskCell.xib */,
 				D8BEBB7626F24A2100CB04EB /* Entity */,
 				D8BEBB7726F24A4000CB04EB /* TaskList */,
 				D8BEBB7926F24A6C00CB04EB /* TaskDetail */,
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E93A6F26C5103700E81799 /* TaskDetail.storyboard in Resources */,
+				D8826EE726F2F9D000C4F9AF /* TaskCell.xib in Resources */,
 				D8E93A5626C0E29400E81799 /* LaunchScreen.storyboard in Resources */,
 				D8E93A5326C0E29400E81799 /* Assets.xcassets in Resources */,
 				D8E93A6226C0ED0400E81799 /* TaskList.storyboard in Resources */,

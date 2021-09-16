@@ -26,6 +26,7 @@ final class TaskListViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = 50
         tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: "TaskCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
     }
     
     @IBAction func addButtonTapped() {
