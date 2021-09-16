@@ -42,7 +42,8 @@ final class TaskDetailPresenter: TaskDetailPresenterInput {
     }
     
     func didTapDoneButton(text: String?) {
-        guard let taskName = text else { return }
+        guard let text = text else { return }
+        let taskName = text.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if let task = taskToEdit {
             model.editTaskName(task: task, name: taskName)
@@ -56,7 +57,9 @@ final class TaskDetailPresenter: TaskDetailPresenterInput {
     
     func editingChangedTextField(text: String?) {
         guard let text = text else { return }
-        if text.isEmpty {
+        let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if trimmedText.isEmpty {
             view.disableDoneButton()
         } else {
             view.enableDoneButton()
