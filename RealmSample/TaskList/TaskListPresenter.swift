@@ -28,7 +28,7 @@ final class TaskListPresenter: TaskListPresenterInput {
     }
     
     private weak var view: TaskListPresenterOutput!
-    private var model: TaskListModelInput
+    private let model: TaskListModelInput
     
     init(view: TaskListPresenterOutput, model: TaskListModelInput) {
         self.view = view

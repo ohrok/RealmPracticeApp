@@ -23,9 +23,9 @@ protocol TaskDetailPresenterOutput: AnyObject {
 }
 
 final class TaskDetailPresenter: TaskDetailPresenterInput {
-    private(set) var taskToEdit: Task?
+    private let taskToEdit: Task?
     private weak var view: TaskDetailPresenterOutput!
-    private var model: TaskDetailModelInput
+    private let model: TaskDetailModelInput
     
     init(view: TaskDetailPresenterOutput, model: TaskDetailModelInput, taskToEdit: Task?) {
         self.view = view
