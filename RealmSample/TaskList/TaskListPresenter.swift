@@ -12,7 +12,7 @@ protocol TaskListPresenterInput {
     func task(forRow row: Int) -> Task?
     func row(of task: Task) -> Int?
     func didTapAddButton()
-    func didTapCellButton(indexPath: IndexPath)
+    func didTapCellButton(indexPath: IndexPath?)
     func didSelectRow(at indexPath: IndexPath)
     func commitDeleteForRow(at indexPath: IndexPath)
 }
@@ -52,8 +52,8 @@ final class TaskListPresenter: TaskListPresenterInput {
         view.transitionToTaskDetail(taskToEdit: nil)
     }
     
-    func didTapCellButton(indexPath: IndexPath) {
-        guard indexPath.row < tasks.count else { return }
+    func didTapCellButton(indexPath: IndexPath?) {
+        guard let indexPath = indexPath, indexPath.row < tasks.count else { return }
         let task = tasks[indexPath.row]
         model.toggleTask(task)
         view.updateTask(task, forRowAt: indexPath)

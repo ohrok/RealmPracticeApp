@@ -63,7 +63,7 @@ extension TaskListViewController: UITableViewDataSource {
 
 extension TaskListViewController: TaskCellDelegate {
     func didTapButton(cell: TaskCell) {
-        let indexPath = tableView.indexPath(for: cell)!
+        let indexPath = tableView.indexPath(for: cell)
         presenter.didTapCellButton(indexPath: indexPath)
     }
 }
