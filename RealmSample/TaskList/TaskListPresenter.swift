@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol TaskListPresenterInput {
     var numberOfTasks: Int { get }
@@ -24,14 +23,16 @@ protocol TaskListPresenterOutput: AnyObject {
 }
 
 final class TaskListPresenter: TaskListPresenterInput {
-    private(set) var tasks: Results<Task>
+    private var tasks: [Task] {
+        return model.tasks
+    }
+    
     private weak var view: TaskListPresenterOutput!
     private var model: TaskListModelInput
     
     init(view: TaskListPresenterOutput, model: TaskListModelInput) {
         self.view = view
         self.model = model
-        tasks = model.fetchTasks()
     }
     
     var numberOfTasks: Int {
