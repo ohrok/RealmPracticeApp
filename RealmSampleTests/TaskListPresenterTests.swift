@@ -11,6 +11,7 @@ import XCTest
 class TaskListPresenterOutputSpy: TaskListPresenterOutput {
     private(set) var countOfInvokingUpdateTask: Int = 0
     private(set) var countOfInvokingTransitionToTaskDetail: Int = 0
+    
     private(set) var taskToEdit: Task?
     
     func updateTask(_ task: Task, forRowAt indexPath: IndexPath) {
@@ -63,10 +64,11 @@ class TaskListPresenterTests: XCTestCase {
         let tasks = [Task.mock()]
         let stub = TaskListModelInputStub(tasks: tasks)
         let presenter = TaskListPresenter(view: spy, model: stub)
-        XCTAssertFalse(presenter.task(forRow: 0)!.isChecked)
         let indexPath = IndexPath(row: 0, section: 0)
+        let isCheckedWillTap = presenter.task(forRow: 0)!.isChecked
         presenter.didTapCellButton(indexPath: indexPath)
-        XCTAssertTrue(presenter.task(forRow: 0)!.isChecked)
+        let isCheckedDidTap = presenter.task(forRow: 0)!.isChecked
+        XCTAssertFalse(isCheckedWillTap == isCheckedDidTap)
         XCTAssertTrue(spy.countOfInvokingUpdateTask == 1)
     }
     
