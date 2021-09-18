@@ -8,35 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		D81E666B26C631C900B7AAF3 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E666A26C631C900B7AAF3 /* TaskCell.swift */; };
+		D83A282A26F44DCA00C0A5AB /* TaskListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A282926F44DCA00C0A5AB /* TaskListPresenterTests.swift */; };
+		D83A282C26F4538600C0A5AB /* TaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A282B26F4538600C0A5AB /* TaskMock.swift */; };
+		D83A282E26F46E8E00C0A5AB /* TaskDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A282D26F46E8E00C0A5AB /* TaskDetailPresenterTest.swift */; };
+		D8826EE726F2F9D000C4F9AF /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8826EE626F2F9D000C4F9AF /* TaskCell.xib */; };
 		D8CB70AE26EC5B9D00EC429A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D8CB70AD26EC5B9D00EC429A /* Realm */; };
 		D8CB70B026EC5B9D00EC429A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D8CB70AF26EC5B9D00EC429A /* RealmSwift */; };
+		D8CB70B326EF3DE800EC429A /* TaskListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */; };
+		D8CB70B526EF3E0200EC429A /* TaskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B426EF3E0200EC429A /* TaskListModel.swift */; };
+		D8CB70B726F1ED3700EC429A /* TaskDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */; };
+		D8CB70B926F1ED4C00EC429A /* TaskDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */; };
 		D8E93A4A26C0E28F00E81799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4926C0E28F00E81799 /* AppDelegate.swift */; };
 		D8E93A4C26C0E28F00E81799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */; };
-		D8E93A4E26C0E28F00E81799 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4D26C0E28F00E81799 /* TasksViewController.swift */; };
+		D8E93A4E26C0E28F00E81799 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A4D26C0E28F00E81799 /* TaskListViewController.swift */; };
 		D8E93A5326C0E29400E81799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E93A5226C0E29400E81799 /* Assets.xcassets */; };
 		D8E93A5626C0E29400E81799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E93A5426C0E29400E81799 /* LaunchScreen.storyboard */; };
 		D8E93A6026C0EA2300E81799 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A5F26C0EA2300E81799 /* Task.swift */; };
-		D8E93A6226C0ED0400E81799 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E93A6126C0ED0400E81799 /* Tasks.storyboard */; };
+		D8E93A6226C0ED0400E81799 /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E93A6126C0ED0400E81799 /* TaskList.storyboard */; };
 		D8E93A6D26C13B3200E81799 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */; };
 		D8E93A6F26C5103700E81799 /* TaskDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D83A282426F44D7700C0A5AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8E93A3E26C0E28F00E81799 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8E93A4526C0E28F00E81799;
+			remoteInfo = RealmSample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D81E666A26C631C900B7AAF3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		D83A281F26F44D7700C0A5AB /* RealmSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D83A282326F44D7700C0A5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83A282926F44DCA00C0A5AB /* TaskListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenterTests.swift; sourceTree = "<group>"; };
+		D83A282B26F4538600C0A5AB /* TaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMock.swift; sourceTree = "<group>"; };
+		D83A282D26F46E8E00C0A5AB /* TaskDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailPresenterTest.swift; sourceTree = "<group>"; };
+		D8826EE626F2F9D000C4F9AF /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListPresenter.swift; sourceTree = "<group>"; };
+		D8CB70B426EF3E0200EC429A /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
+		D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailModel.swift; sourceTree = "<group>"; };
+		D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailPresenter.swift; sourceTree = "<group>"; };
 		D8E93A4626C0E28F00E81799 /* RealmSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E93A4926C0E28F00E81799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8E93A4D26C0E28F00E81799 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		D8E93A4D26C0E28F00E81799 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		D8E93A5226C0E29400E81799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8E93A5526C0E29400E81799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8E93A5726C0E29400E81799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8E93A5F26C0EA2300E81799 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		D8E93A6126C0ED0400E81799 /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
+		D8E93A6126C0ED0400E81799 /* TaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskList.storyboard; sourceTree = "<group>"; };
 		D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D83A281C26F44D7700C0A5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8E93A4326C0E28F00E81799 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,26 +84,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D81E666826C631A400B7AAF3 /* Models */ = {
+		D83A282026F44D7700C0A5AB /* RealmSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				D83A282926F44DCA00C0A5AB /* TaskListPresenterTests.swift */,
+				D83A282D26F46E8E00C0A5AB /* TaskDetailPresenterTest.swift */,
+				D83A282326F44D7700C0A5AB /* Info.plist */,
+				D83A282B26F4538600C0A5AB /* TaskMock.swift */,
+			);
+			path = RealmSampleTests;
+			sourceTree = "<group>";
+		};
+		D8BEBB7626F24A2100CB04EB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				D8E93A5F26C0EA2300E81799 /* Task.swift */,
 			);
-			name = Models;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		D81E666926C631B100B7AAF3 /* Views */ = {
+		D8BEBB7726F24A4000CB04EB /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				D81E666A26C631C900B7AAF3 /* TaskCell.swift */,
+				D8E93A6126C0ED0400E81799 /* TaskList.storyboard */,
+				D8CB70B426EF3E0200EC429A /* TaskListModel.swift */,
+				D8CB70B226EF3DE800EC429A /* TaskListPresenter.swift */,
+				D8E93A4D26C0E28F00E81799 /* TaskListViewController.swift */,
 			);
-			name = Views;
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		D8BEBB7926F24A6C00CB04EB /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */,
+				D8CB70B626F1ED3700EC429A /* TaskDetailModel.swift */,
+				D8CB70B826F1ED4C00EC429A /* TaskDetailPresenter.swift */,
+				D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */,
+			);
+			path = TaskDetail;
 			sourceTree = "<group>";
 		};
 		D8E93A3D26C0E28F00E81799 = {
 			isa = PBXGroup;
 			children = (
 				D8E93A4826C0E28F00E81799 /* RealmSample */,
+				D83A282026F44D7700C0A5AB /* RealmSampleTests */,
 				D8E93A4726C0E28F00E81799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E93A4626C0E28F00E81799 /* RealmSample.app */,
+				D83A281F26F44D7700C0A5AB /* RealmSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,38 +148,39 @@
 			children = (
 				D8E93A4926C0E28F00E81799 /* AppDelegate.swift */,
 				D8E93A4B26C0E28F00E81799 /* SceneDelegate.swift */,
-				D81E666826C631A400B7AAF3 /* Models */,
-				D81E666926C631B100B7AAF3 /* Views */,
-				D8E93A6B26C13B1900E81799 /* Controllers */,
-				D8E93A6A26C132B400E81799 /* Storyboards */,
+				D81E666A26C631C900B7AAF3 /* TaskCell.swift */,
+				D8826EE626F2F9D000C4F9AF /* TaskCell.xib */,
+				D8BEBB7626F24A2100CB04EB /* Entity */,
+				D8BEBB7726F24A4000CB04EB /* TaskList */,
+				D8BEBB7926F24A6C00CB04EB /* TaskDetail */,
+				D8E93A5426C0E29400E81799 /* LaunchScreen.storyboard */,
 				D8E93A5226C0E29400E81799 /* Assets.xcassets */,
 				D8E93A5726C0E29400E81799 /* Info.plist */,
 			);
 			path = RealmSample;
 			sourceTree = "<group>";
 		};
-		D8E93A6A26C132B400E81799 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				D8E93A6126C0ED0400E81799 /* Tasks.storyboard */,
-				D8E93A6E26C5103600E81799 /* TaskDetail.storyboard */,
-				D8E93A5426C0E29400E81799 /* LaunchScreen.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		D8E93A6B26C13B1900E81799 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D8E93A4D26C0E28F00E81799 /* TasksViewController.swift */,
-				D8E93A6C26C13B3200E81799 /* TaskDetailViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D83A281E26F44D7700C0A5AB /* RealmSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83A282826F44D7800C0A5AB /* Build configuration list for PBXNativeTarget "RealmSampleTests" */;
+			buildPhases = (
+				D83A281B26F44D7700C0A5AB /* Sources */,
+				D83A281C26F44D7700C0A5AB /* Frameworks */,
+				D83A281D26F44D7700C0A5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D83A282526F44D7700C0A5AB /* PBXTargetDependency */,
+			);
+			name = RealmSampleTests;
+			productName = RealmSampleTests;
+			productReference = D83A281F26F44D7700C0A5AB /* RealmSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D8E93A4526C0E28F00E81799 /* RealmSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8E93A5A26C0E29400E81799 /* Build configuration list for PBXNativeTarget "RealmSample" */;
@@ -148,6 +211,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					D83A281E26F44D7700C0A5AB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D8E93A4526C0E28F00E81799;
+					};
 					D8E93A4526C0E28F00E81799 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -170,39 +237,70 @@
 			projectRoot = "";
 			targets = (
 				D8E93A4526C0E28F00E81799 /* RealmSample */,
+				D83A281E26F44D7700C0A5AB /* RealmSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D83A281D26F44D7700C0A5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8E93A4426C0E28F00E81799 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D8E93A6F26C5103700E81799 /* TaskDetail.storyboard in Resources */,
+				D8826EE726F2F9D000C4F9AF /* TaskCell.xib in Resources */,
 				D8E93A5626C0E29400E81799 /* LaunchScreen.storyboard in Resources */,
 				D8E93A5326C0E29400E81799 /* Assets.xcassets in Resources */,
-				D8E93A6226C0ED0400E81799 /* Tasks.storyboard in Resources */,
+				D8E93A6226C0ED0400E81799 /* TaskList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D83A281B26F44D7700C0A5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83A282A26F44DCA00C0A5AB /* TaskListPresenterTests.swift in Sources */,
+				D83A282C26F4538600C0A5AB /* TaskMock.swift in Sources */,
+				D83A282E26F46E8E00C0A5AB /* TaskDetailPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8E93A4226C0E28F00E81799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CB70B326EF3DE800EC429A /* TaskListPresenter.swift in Sources */,
 				D8E93A6026C0EA2300E81799 /* Task.swift in Sources */,
 				D8E93A6D26C13B3200E81799 /* TaskDetailViewController.swift in Sources */,
-				D8E93A4E26C0E28F00E81799 /* TasksViewController.swift in Sources */,
+				D8E93A4E26C0E28F00E81799 /* TaskListViewController.swift in Sources */,
 				D8E93A4A26C0E28F00E81799 /* AppDelegate.swift in Sources */,
 				D81E666B26C631C900B7AAF3 /* TaskCell.swift in Sources */,
+				D8CB70B926F1ED4C00EC429A /* TaskDetailPresenter.swift in Sources */,
+				D8CB70B726F1ED3700EC429A /* TaskDetailModel.swift in Sources */,
+				D8CB70B526EF3E0200EC429A /* TaskListModel.swift in Sources */,
 				D8E93A4C26C0E28F00E81799 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D83A282526F44D7700C0A5AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8E93A4526C0E28F00E81799 /* RealmSample */;
+			targetProxy = D83A282426F44D7700C0A5AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D8E93A5426C0E29400E81799 /* LaunchScreen.storyboard */ = {
@@ -216,6 +314,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D83A282626F44D7800C0A5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PH7H3K3AG6;
+				INFOPLIST_FILE = RealmSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ohvamrrr.RealmSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmSample.app/RealmSample";
+			};
+			name = Debug;
+		};
+		D83A282726F44D7800C0A5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PH7H3K3AG6;
+				INFOPLIST_FILE = RealmSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ohvamrrr.RealmSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmSample.app/RealmSample";
+			};
+			name = Release;
+		};
 		D8E93A5826C0E29400E81799 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -375,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D83A282826F44D7800C0A5AB /* Build configuration list for PBXNativeTarget "RealmSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83A282626F44D7800C0A5AB /* Debug */,
+				D83A282726F44D7800C0A5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D8E93A4126C0E28F00E81799 /* Build configuration list for PBXProject "RealmSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

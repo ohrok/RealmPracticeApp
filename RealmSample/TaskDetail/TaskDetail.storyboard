@@ -11,7 +11,7 @@
         <!--Task Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="TaskDetail" id="Y6W-OH-hqX" customClass="TaskDetailViewController" customModule="RealmPracticeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TaskDetailViewController" customModule="RealmSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="doneButtonPushed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lnS-ll-Fty"/>
+                                                    <action selector="doneButtonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lnS-ll-Fty"/>
                                                 </connections>
                                             </button>
                                         </subviews>

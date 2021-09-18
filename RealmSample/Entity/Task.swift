@@ -8,7 +8,6 @@
 import RealmSwift
 
 class Task: Object {
-    
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var name: String = ""
     @Persisted var isChecked: Bool = false
